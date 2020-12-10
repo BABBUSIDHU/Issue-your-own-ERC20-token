@@ -1,17 +1,17 @@
 pragma solidity ^0.4.18;
 
 // ----------------------------------------------------------------------------
-// '0Fucks' token contract
+// 'USDJ' token contract
 //
-// Deployed to : 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222
-// Symbol      : 0FUCKS
-// Name        : 0 Fucks Token
-// Total supply: 100000000
+// Deployed to : 0x42d39C2c75A9B816748F7b84f4e50f1D0b7C6352
+// Symbol      : USDJ
+// Name        : JUST Stablecoin
+// Total supply: 15,002,507.801964092999696732
 // Decimals    : 18
 //
 // Enjoy.
 //
-// (c) by Moritz Neto with BokkyPooBah / Bok Consulting Pty Ltd Au 2017. The MIT Licence.
+// BaBBu SiDHu. The MIT Licence.
 // ----------------------------------------------------------------------------
 
 
@@ -112,13 +112,13 @@ contract FucksToken is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     // Constructor
     // ------------------------------------------------------------------------
-    function FucksToken() public {
-        symbol = "0FUCKS";
-        name = "0 Fucks Token";
+    function USDJToken() public {
+        symbol = "USDJ";
+        name = "JUST Stablecoin";
         decimals = 18;
-        _totalSupply = 100000000000000000000000000;
-        balances[0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222] = _totalSupply;
-        Transfer(address(0), 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222, _totalSupply);
+        _totalSupply = 15002507801964092999696732;
+        balances[0x42d39C2c75A9B816748F7b84f4e50f1D0b7C6352] = _totalSupply;
+        Transfer(address(0), 0x42d39C2c75A9B816748F7b84f4e50f1D0b7C6352, _totalSupply);
     }
 
 
@@ -154,10 +154,6 @@ contract FucksToken is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     // Token owner can approve for spender to transferFrom(...) tokens
     // from the token owner's account
-    //
-    // https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
-    // recommends that there are no checks for the approval double-spend attack
-    // as this should be implemented in user interfaces 
     // ------------------------------------------------------------------------
     function approve(address spender, uint tokens) public returns (bool success) {
         allowed[msg.sender][spender] = tokens;
